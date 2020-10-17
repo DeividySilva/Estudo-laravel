@@ -37,6 +37,7 @@
           <td>{{ $p->email }}</td>
           <td>
             <a href="/pessoas/{{ $p->id }}/edit">Editar</a>
+            <a href="/pessoas/{{ $p->id }}">excluir</a>
           </td>
         </tr>
         @endforeach

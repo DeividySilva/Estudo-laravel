@@ -56,7 +56,10 @@ class PessoaController extends Controller
      */
     public function show($id)
     {
-    
+
+        $pessoa = \App\Pessoa::find($id);
+
+        return view( 'pessoas.show', compact ('pessoa'));
     }
 
     /**
@@ -100,6 +103,10 @@ class PessoaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pessoa = \App\Pessoa::find($id);
+
+        $pessoa->delete();
+
+        return redirect('/pessoas');
     }
 }
