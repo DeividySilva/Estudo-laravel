@@ -55,10 +55,8 @@ class PessoaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Pessoa $pessoa)
     {
-
-        $pessoa = \App\Pessoa::find($id);
 
         return view( 'pessoas.show', compact ('pessoa'));
     }
@@ -69,9 +67,8 @@ class PessoaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Pessoa $pessoa)
     {
-        $pessoa = \App\Pessoa::find($id);
 
         return view('pessoas.form', compact ('pessoa'));
     }
@@ -83,9 +80,9 @@ class PessoaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,Pessoa $pessoa)
     {
-        $pessoa = \App\Pessoa::find($id);
+       // $pessoa = \App\Pessoa::find($id);
 
         $pessoa->nome = $request->nome;
         $pessoa->telefone = $request->telefone;
@@ -102,9 +99,8 @@ class PessoaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Pessoa $pessoa)
     {
-        $pessoa = \App\Pessoa::find($id);
 
         $pessoa->delete();
 
