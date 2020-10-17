@@ -8,7 +8,13 @@
     <style> table, th, td {
         border: 1px solid black;
       }
+
+      tr {
+  width: 100%;
+  background-color: #f1f1c1;
+}
     </style>
+
 </head>
 <body>
     <h1>Pessoas Cadastradas</h1>
@@ -29,7 +35,9 @@
           <td>{{ $p->nome }}</td>
           <td>{{ $p->telefone }}</td>
           <td>{{ $p->email }}</td>
-          <td>...</td>
+          <td>
+            <a href="/pessoas/{{ $p->id }}/edit">Editar</a>
+          </td>
         </tr>
         @endforeach
       </table> 
