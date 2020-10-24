@@ -3,7 +3,8 @@
 @section('titulo','Pessoas Cadastradas')
 
 @section('conteudo')
-    <h1>Pessoas Cadastradas</h1>
+
+<h1>Pessoas Cadastradas</h1>
 
     <a href="/pessoas/create">Novo Cadastrar</a>
 

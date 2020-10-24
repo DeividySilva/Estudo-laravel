@@ -47,6 +47,11 @@ class PessoaController extends Controller
        $pessoa->save();
        */
 
+       $request->validate([
+        'nome' => 'required',
+        'telefone' => 'required'
+       ]);
+
        Pessoa::create($request->all());
        return redirect('/pessoas');
     }
