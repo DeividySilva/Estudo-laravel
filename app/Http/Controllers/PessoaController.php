@@ -89,7 +89,7 @@ class PessoaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,Pessoa $pessoa)
+    public function update(StorePessoaPost $request,Pessoa $pessoa)
     {
        // $pessoa = \App\Pessoa::find($id);
         /*

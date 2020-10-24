@@ -26,7 +26,8 @@ class StorePessoaPost extends FormRequest
         return [
 
                 'nome' => 'required',
-                'telefone' => 'required'
+                'telefone' => 'required',
+                'cpf' => 'digits:11|nullable'
         ];
     }
 }

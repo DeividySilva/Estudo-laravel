@@ -10,5 +10,6 @@ class Pessoa extends Model
        'nome',
        'telefone',
        'email',
+       'cpf'
    ];
 }
