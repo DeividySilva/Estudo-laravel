@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pessoa;
+use App\Http\Requests\StorePessoaPost;
 
 class PessoaController extends Controller
 {
@@ -36,7 +37,7 @@ class PessoaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePessoaPost $request)
     {
       /* $pessoa = new \App\Pessoa();
 
@@ -47,15 +48,16 @@ class PessoaController extends Controller
        $pessoa->save();
        */
 
+       /*
        $request->validate([
         'nome' => 'required',
         'telefone' => 'required'
        ]);
-
+       */
        Pessoa::create($request->all());
        return redirect('/pessoas');
     }
-
+      
     /**
      * Display the specified resource.
      *
